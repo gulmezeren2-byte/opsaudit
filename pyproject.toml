@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opsaudit"
+version = "0.1.0"
+description = "Operations analytics that audits its own numbers - OTIF, forecast accuracy, ABC-XYZ and Pareto with a mandatory honesty block. JSON-only, built for AI agents and pipelines."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Eren Gülmez" }]
+keywords = ["supply-chain", "otif", "forecasting", "abc-analysis", "pareto", "ai-agents", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Manufacturing",
+    "Topic :: Office/Business",
+]
+dependencies = ["pandas>=2.2", "numpy>=1.26"]
+
+[project.urls]
+Homepage = "https://github.com/gulmezeren2-byte/opsaudit"
+Issues = "https://github.com/gulmezeren2-byte/opsaudit/issues"
+
+[project.scripts]
+opsaudit = "opsaudit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["opsaudit*"]
