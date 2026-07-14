@@ -1,6 +1,6 @@
 # opsaudit — operations analytics that audits its own numbers
 
-![Python](https://img.shields.io/badge/python-3.10+-blue) ![License](https://img.shields.io/badge/license-MIT-green) ![Tests](https://img.shields.io/badge/tests-8%20passing-brightgreen)
+![Python](https://img.shields.io/badge/python-3.10+-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
 🇹🇷 Türkçesi: [README.tr.md](README.tr.md)
 
