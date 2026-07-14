@@ -8,6 +8,12 @@
 >
 > Yalnızca JSON çıktı. Yapay zeka ajanları, veri hatları ve dipnot okuyan insanlar için.
 
+```bash
+pip install git+https://github.com/gulmezeren2-byte/opsaudit
+```
+
+![opsaudit iş başında: dürüstlük bloğuyla otif score](assets/demo.png)
+
 ## Ajan sözleşmesi
 
 1. **Yalnızca JSON stdout.** Sonuçlar da veri hataları da JSON'dır (`{"error": {...}}` + sıfır-dışı çıkış kodu). Kullanım hataları stderr'e gider (çıkış 2). Başka hiçbir şey asla basılmaz.
@@ -52,6 +58,15 @@ Tipik ajan iş akışı:
 4. Sonucu **dürüstlük bloğuyla birlikte** raporla — tanımlar ve `not_shown` maddeleri, ajanın özetinin abartıya kaçmasını engelleyen şeydir
 
 [industrial-engineering-ai-skills](https://github.com/gulmezeren2-byte/industrial-engineering-ai-skills) yöntem paketiyle birlikte çalışır: beceriler yargıyı, `opsaudit` hesabı taşır.
+
+## Alternatiflerle karşılaştırma
+
+| | Deterministik | Tanımlar açık | Makine-okur çekinceler | Ajan-dostu çıktı |
+|---|:---:|:---:|:---:|:---:|
+| Elle yazılmış pandas scripti | ✓ | nadiren | ✗ | ✗ |
+| BI panosu | ✓ | bazen | ✗ | ✗ |
+| Serbest LLM analizi | ✗ | ✗ | ✗ | ~ |
+| **opsaudit** | ✓ | **her zaman — zorunlu** | **✓ dürüstlük bloğu** | **✓ JSON sözleşmesi** |
 
 ## Neden dürüstlük bloğu?
 

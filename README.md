@@ -8,6 +8,12 @@
 >
 > JSON-only output. Built for AI agents, pipelines and humans who read footnotes.
 
+```bash
+pip install git+https://github.com/gulmezeren2-byte/opsaudit
+```
+
+![opsaudit in action: otif score with the honesty block](assets/demo.png)
+
 ## The agent contract
 
 1. **JSON-only stdout.** Results and data errors alike are JSON (`{"error": {...}}` + non-zero exit). Usage errors go to stderr with exit 2. Nothing else is ever printed.
@@ -88,6 +94,15 @@ A typical agent workflow:
 4. Report the result **together with the honesty block** — the definitions and `not_shown` entries are what keep the agent's summary from over-claiming
 
 Pairs with the [industrial-engineering-ai-skills](https://github.com/gulmezeren2-byte/industrial-engineering-ai-skills) method pack: the skills carry the judgment, `opsaudit` carries the computation.
+
+## How it compares
+
+| | Deterministic | Definitions disclosed | Machine-readable caveats | Agent-friendly output |
+|---|:---:|:---:|:---:|:---:|
+| Hand-rolled pandas script | ✓ | rarely | ✗ | ✗ |
+| BI dashboard | ✓ | sometimes | ✗ | ✗ |
+| Freeform LLM analysis | ✗ | ✗ | ✗ | ~ |
+| **opsaudit** | ✓ | **always — enforced** | **✓ honesty block** | **✓ JSON contract** |
 
 ## Why an honesty block?
 
