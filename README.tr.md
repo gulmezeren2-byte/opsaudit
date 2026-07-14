@@ -1,6 +1,6 @@
 # opsaudit — kendi sayılarını denetleyen operasyon analitiği
 
-![Python](https://img.shields.io/badge/python-3.10+-blue) ![License](https://img.shields.io/badge/license-MIT-green)
+[![CI](https://github.com/gulmezeren2-byte/opsaudit/actions/workflows/ci.yml/badge.svg)](https://github.com/gulmezeren2-byte/opsaudit/actions/workflows/ci.yml) ![Python](https://img.shields.io/badge/python-3.10+-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
 🇬🇧 English version: [README.md](README.md)
 
